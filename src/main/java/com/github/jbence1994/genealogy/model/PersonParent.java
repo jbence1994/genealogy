@@ -22,10 +22,10 @@ public class PersonParent {
     private Long id;
 
     @ManyToOne
-    @JoinColumn(name = "child_id", nullable = false)
+    @JoinColumn(name = "child_id")
     private Person child;
 
     @ManyToOne
-    @JoinColumn(name = "parent_id", nullable = false)
+    @JoinColumn(name = "parent_id")
     private Person parent;
 }
