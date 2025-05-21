@@ -1,7 +1,5 @@
 package com.github.jbence1994.genealogy.model;
 
-import org.hibernate.sql.ast.SqlTreeCreationException;
-import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
@@ -18,17 +16,17 @@ class PersonTests {
         return Stream.of(
                 Arguments.of(
                         "Juhász Mihály",
-                        new Person(UUID.randomUUID(), "Mihály", null, "Juhász", "Makó", LocalDate.of(1917, 9, 29), "Budapest", LocalDate.of(2004, 10, 4), null, null, null, null),
+                        new Person(UUID.randomUUID(), "Mihály", null, "Juhász", "Makó", LocalDate.of(1917, 9, 29), "Budapest", LocalDate.of(2004, 10, 4), null, null, null, null, null),
                         87
                 ),
                 Arguments.of(
                         "Marosi Irén",
-                        new Person(UUID.randomUUID(), "Irén", null, "Marosi", "Makó", LocalDate.of(1936, 1, 1), "Makó", LocalDate.of(1998, 1, 1), null, null, null, null),
+                        new Person(UUID.randomUUID(), "Irén", null, "Marosi", "Makó", LocalDate.of(1936, 1, 1), "Makó", LocalDate.of(1998, 1, 1), null, null, null, null, null),
                         62
                 ),
                 Arguments.of(
                         "Juhász Bence Zsolt",
-                        new Person(UUID.randomUUID(), "Bence", "Zsolt", "Juhász", "Makó", LocalDate.of(1994, 3, 27), null, null, null, null, null, null),
+                        new Person(UUID.randomUUID(), "Bence", "Zsolt", "Juhász", "Makó", LocalDate.of(1994, 3, 27), null, null, null, null, null, null, null),
                         31
                 )
         );

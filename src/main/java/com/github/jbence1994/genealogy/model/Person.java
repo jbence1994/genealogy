@@ -67,6 +67,14 @@ public class Person {
     )
     private Set<Person> siblings = new HashSet<>();
 
+    @ManyToMany(fetch = FetchType.EAGER)
+    @JoinTable(
+            name = "person_spouses",
+            joinColumns = @JoinColumn(name = "person_id"),
+            inverseJoinColumns = @JoinColumn(name = "spouse_id")
+    )
+    private Set<Person> spouses = new HashSet<>();
+
     public int calculateAge() {
         return dateOfDeath == null ?
                 Period.between(dateOfBirth, LocalDate.now()).getYears() :

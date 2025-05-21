@@ -61,3 +61,18 @@ CREATE TABLE IF NOT EXISTS person_siblings
             ON DELETE CASCADE
             ON UPDATE CASCADE
 );
+
+CREATE TABLE IF NOT EXISTS person_spouses
+(
+    person_id BINARY(16) NOT NULL,
+    spouse_id BINARY(16) NOT NULL,
+    PRIMARY KEY (person_id, spouse_id),
+    CONSTRAINT fk_person_spouses___person_id__person_id
+        FOREIGN KEY (person_id) REFERENCES people (id)
+            ON DELETE CASCADE
+            ON UPDATE CASCADE,
+    CONSTRAINT fk_person_spouses___spouse_id__person_id
+        FOREIGN KEY (spouse_id) REFERENCES people (id)
+            ON DELETE CASCADE
+            ON UPDATE CASCADE
+);
