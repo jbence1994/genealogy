@@ -3,7 +3,9 @@ package com.github.jbence1994.genealogy.model;
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
 import jakarta.persistence.Id;
-import jakarta.persistence.OneToMany;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.JoinTable;
+import jakarta.persistence.ManyToMany;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -41,14 +43,29 @@ public class Person {
 
     private String photoFileName;
 
-    @OneToMany(mappedBy = "child", fetch = FetchType.EAGER)
-    private Set<PersonParent> parents = new HashSet<>();
+    @ManyToMany(fetch = FetchType.EAGER)
+    @JoinTable(
+            name = "person_parents",
+            joinColumns = @JoinColumn(name = "person_id"),
+            inverseJoinColumns = @JoinColumn(name = "parent_id")
+    )
+    private Set<Person> parents = new HashSet<>();
 
-    @OneToMany(mappedBy = "parent", fetch = FetchType.EAGER)
-    private Set<PersonParent> children = new HashSet<>();
+    @ManyToMany(fetch = FetchType.EAGER)
+    @JoinTable(
+            name = "person_children",
+            joinColumns = @JoinColumn(name = "person_id"),
+            inverseJoinColumns = @JoinColumn(name = "child_id")
+    )
+    private Set<Person> children = new HashSet<>();
 
-    @OneToMany(mappedBy = "person", fetch = FetchType.EAGER)
-    private Set<PersonSibling> siblings = new HashSet<>();
+    @ManyToMany(fetch = FetchType.EAGER)
+    @JoinTable(
+            name = "person_siblings",
+            joinColumns = @JoinColumn(name = "person_id"),
+            inverseJoinColumns = @JoinColumn(name = "sibling_id")
+    )
+    private Set<Person> siblings = new HashSet<>();
 
     public int calculateAge() {
         return dateOfDeath == null ?
