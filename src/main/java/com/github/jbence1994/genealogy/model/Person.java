@@ -10,6 +10,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 import java.time.LocalDate;
+import java.time.Period;
 import java.util.HashSet;
 import java.util.Set;
 import java.util.UUID;
@@ -48,4 +49,10 @@ public class Person {
 
     @OneToMany(mappedBy = "person", fetch = FetchType.EAGER)
     private Set<PersonSibling> siblings = new HashSet<>();
+
+    public int calculateAge() {
+        return dateOfDeath == null ?
+                Period.between(dateOfBirth, LocalDate.now()).getYears() :
+                Period.between(dateOfBirth, dateOfDeath).getYears();
+    }
 }
