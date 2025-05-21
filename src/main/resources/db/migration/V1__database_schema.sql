@@ -19,13 +19,11 @@ CREATE TABLE IF NOT EXISTS people
 
 CREATE TABLE person_parents
 (
-    id        BIGINT     NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    child_id  BINARY(16) NOT NULL,
+    person_id BINARY(16) NOT NULL,
     parent_id BINARY(16) NOT NULL,
-    CONSTRAINT person_parents___child_id__parent_id
-        UNIQUE (child_id, parent_id),
-    CONSTRAINT fk_person_parents___child_id__person_id
-        FOREIGN KEY (child_id) REFERENCES people (id)
+    PRIMARY KEY (person_id, parent_id),
+    CONSTRAINT fk_person_parents___person_id__person_id
+        FOREIGN KEY (person_id) REFERENCES people (id)
             ON DELETE CASCADE
             ON UPDATE CASCADE,
     CONSTRAINT fk_person_parents___parent_id__person_id
@@ -34,13 +32,26 @@ CREATE TABLE person_parents
             ON UPDATE CASCADE
 );
 
+CREATE TABLE person_children
+(
+    person_id BINARY(16) NOT NULL,
+    child_id  BINARY(16) NOT NULL,
+    PRIMARY KEY (person_id, child_id),
+    CONSTRAINT fk_person_children___person_id_person_id
+        FOREIGN KEY (person_id) REFERENCES people (id)
+            ON DELETE CASCADE
+            ON UPDATE CASCADE,
+    CONSTRAINT fk_person_children___child_id__person_id
+        FOREIGN KEY (child_id) REFERENCES people (id)
+            ON DELETE CASCADE
+            ON UPDATE CASCADE
+);
+
 CREATE TABLE IF NOT EXISTS person_siblings
 (
-    id         BIGINT     NOT NULL AUTO_INCREMENT PRIMARY KEY,
     person_id  BINARY(16) NOT NULL,
     sibling_id BINARY(16) NOT NULL,
-    CONSTRAINT person_siblings___person_id__people__id
-        UNIQUE (person_id, sibling_id),
+    PRIMARY KEY (person_id, sibling_id),
     CONSTRAINT fk_person_siblings___person_id__person_id
         FOREIGN KEY (person_id) REFERENCES people (id)
             ON DELETE CASCADE
