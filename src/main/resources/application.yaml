@@ -3,3 +3,10 @@ spring:
     name: genealogy
   profiles:
     active: default
+
+genealogy:
+  file-extensions-config:
+    allowed-file-extensions: jpg,jpeg,png,bmp
+
+  photo-upload-directory-path:
+    people: ${UPLOADS_DIRECTORY_PATH}
