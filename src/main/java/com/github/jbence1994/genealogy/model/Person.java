@@ -8,7 +8,6 @@ import jakarta.persistence.JoinTable;
 import jakarta.persistence.ManyToMany;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
-import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 import java.time.LocalDate;
@@ -21,8 +20,7 @@ import java.util.UUID;
 @Table(name = "people")
 @AllArgsConstructor
 @NoArgsConstructor
-@Getter
-public class Person {
+public class Person extends PhotoEntity {
 
     @Id
     private UUID id;
@@ -74,6 +72,16 @@ public class Person {
             inverseJoinColumns = @JoinColumn(name = "spouse_id")
     )
     private Set<Person> spouses = new HashSet<>();
+
+    @Override
+    public String getPhotoFileName() {
+        return photoFileName;
+    }
+
+    @Override
+    public void setPhotoFileName(String photoFileName) {
+        this.photoFileName = photoFileName;
+    }
 
     public int calculateAge() {
         return dateOfDeath == null ?
