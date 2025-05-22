@@ -32,10 +32,10 @@
 
         <!-- JaCoCo properties -->
         <jacoco.line-coverage>0.00</jacoco.line-coverage>
-        <jacoco.branch-coverage>0.00</jacoco.branch-coverage>
-        <jacoco.complexity-coverage>0.00</jacoco.complexity-coverage>
-        <jacoco.method-coverage>0.00</jacoco.method-coverage>
-        <jacoco.class-coverage>0.00</jacoco.class-coverage>
+        <jacoco.branch-coverage>0.12</jacoco.branch-coverage>
+        <jacoco.complexity-coverage>0.05</jacoco.complexity-coverage>
+        <jacoco.method-coverage>0.03</jacoco.method-coverage>
+        <jacoco.class-coverage>0.09</jacoco.class-coverage>
 
         <!-- Flags -->
         <flyway.skip>false</flyway.skip>
