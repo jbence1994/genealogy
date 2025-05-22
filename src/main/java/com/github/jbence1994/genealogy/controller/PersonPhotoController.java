@@ -33,7 +33,7 @@ import org.springframework.web.multipart.MultipartFile;
 import java.util.UUID;
 
 @RestController
-@RequestMapping("/people/{id}/photo")
+@RequestMapping("api/people/{id}/photo")
 @CrossOrigin
 @AllArgsConstructor
 public class PersonPhotoController {
