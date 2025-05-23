@@ -11,10 +11,10 @@
         <relativePath/>
     </parent>
 
-    <groupId>com.github.jbence1994</groupId>
-    <artifactId>genealogy</artifactId>
-    <name>genealogy</name>
-    <description>Genealogy application.</description>
+    <groupId>org.thegenealogyproject</groupId>
+    <artifactId>the-genealogy-api</artifactId>
+    <name>the-genealogy-api</name>
+    <description>Genealogy application's backend.</description>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>jar</packaging>
 
