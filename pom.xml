@@ -14,7 +14,7 @@
     <groupId>org.thegenealogyproject</groupId>
     <artifactId>the-genealogy-api</artifactId>
     <name>the-genealogy-api</name>
-    <description>Genealogy application's backend.</description>
+    <description>The Genealogy Project application's backend.</description>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>jar</packaging>
 
