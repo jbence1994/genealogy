@@ -1,7 +1,7 @@
-genealogy
-=========
+the-genealogy-api
+=================
 
-### Genealogy application.
+### Genealogy application's backend.
 
 Prerequisites
 -------------
