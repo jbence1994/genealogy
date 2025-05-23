@@ -1,7 +1,17 @@
 the-genealogy-api
 =================
 
-### Genealogy application's backend.
+### The Genealogy Project application's backend.
+
+<p>
+  <img
+    src="./images/logo.png"
+    alt="The Genealogy Project logo"
+    title="The Genealogy Project logo"
+    width="200"
+    height="170"
+  />
+</p>
 
 [![Continuous integration](https://github.com/the-genealogy-project/the-genealogy-api/actions/workflows/build.yaml/badge.svg)](https://github.com/the-genealogy-project/the-genealogy-api/actions/workflows/build.yaml)
 
