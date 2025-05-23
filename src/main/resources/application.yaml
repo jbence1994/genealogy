@@ -3,6 +3,9 @@ spring:
     name: genealogy
   profiles:
     active: default
+  graphql:
+    graphiql:
+      enabled: true
 
 the-genealogy-project:
   file-extensions-config:
