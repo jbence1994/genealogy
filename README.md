@@ -3,6 +3,8 @@ the-genealogy-api
 
 ### Genealogy application's backend.
 
+[![Continuous integration](https://github.com/the-genealogy-project/the-genealogy-api/actions/workflows/build.yaml/badge.svg)](https://github.com/the-genealogy-project/the-genealogy-api/actions/workflows/build.yaml)
+
 Prerequisites
 -------------
 
