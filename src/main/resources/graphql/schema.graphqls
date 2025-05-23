@@ -1,0 +1,19 @@
+type Query {
+    person(id: ID!): Person
+}
+
+type Person {
+    id: ID!
+    firstName: String!
+    middleName: String
+    lastName: String!
+    placeOfBirth: String
+    dateOfBirth: String
+    placeOfDeath: String
+    dateOfDeath: String,
+    photoFileName: String
+    parents: [Person]
+    children: [Person]
+    siblings: [Person]
+    spouses: [Person]
+}
