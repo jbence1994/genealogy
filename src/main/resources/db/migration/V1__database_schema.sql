@@ -1,8 +1,8 @@
-CREATE DATABASE IF NOT EXISTS genealogy
+CREATE DATABASE IF NOT EXISTS the_genealogy_project
     DEFAULT CHARACTER SET utf8
     COLLATE utf8_hungarian_ci;
 
-USE genealogy;
+USE the_genealogy_project;
 
 CREATE TABLE IF NOT EXISTS people
 (
