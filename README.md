@@ -44,3 +44,5 @@ mvn spring-boot:run -Dspring-boot.run.profiles=dev
 
 **Note: The `default` Spring profile is used by GitHub Actions workflows to make sure JPA starts up without requiring
 an external database, thus preventing build failures. GitHub Actions will pick up `default` automatically.**
+
+#### To view GraphQL queries and mutations, open [GraphiQL](http://localhost:8080/graphiql) in your web browser.
