@@ -6,6 +6,8 @@ spring:
   graphql:
     graphiql:
       enabled: true
+    cors:
+      allowed-origins: "*"
 
 the-genealogy-project:
   file-extensions-config:
