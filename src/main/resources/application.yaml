@@ -1,6 +1,6 @@
 spring:
   application:
-    name: genealogy
+    name: the-genealogy-api
   profiles:
     active: default
   graphql:
