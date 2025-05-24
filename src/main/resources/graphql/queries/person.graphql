@@ -1,0 +1,24 @@
+{
+    person(id: "") {
+        id
+        firstName
+        middleName
+        lastName
+        placeOfBirth
+        dateOfBirth
+        photoFileName
+        parents {
+            firstName
+            lastName
+        }
+        children {
+            firstName
+        }
+        siblings {
+            firstName
+        }
+        spouses {
+            firstName
+        }
+    }
+}
