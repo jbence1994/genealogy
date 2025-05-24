@@ -4,6 +4,9 @@
         firstName
         middleName
         lastName
+        placeOfBirth
+        dateOfBirth
+        photoFileName
         parents {
             firstName
             lastName
