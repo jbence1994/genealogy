@@ -1,6 +1,5 @@
 {
     person(id: "") {
-        id
         firstName
         middleName
         lastName
